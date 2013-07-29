@@ -1,0 +1,8 @@
+@mixin establish-text-rhythm($leader: 1, $trailer: 0) {
+  address, article, aside, blockquote, details, dl, fieldset, figure, form, hr, nav, ol, p, pre, section, table, ul {
+    margin-left: 0;
+    margin-right: 0;
+    @include leader($leader);
+    @include trailer($trailer);
+  }
+}

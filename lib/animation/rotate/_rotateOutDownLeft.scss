@@ -1,0 +1,12 @@
+@include defineKeyframes('rotateOutDownLeft') {
+  0% {
+    #{$arg}transform-origin: left bottom;
+    #{$arg}transform: rotate(0);
+    opacity: 1;
+  }
+  100% {
+    #{$arg}transform-origin: left bottom;
+    #{$arg}transform: rotate(90deg);
+    opacity: 0;
+  }
+}

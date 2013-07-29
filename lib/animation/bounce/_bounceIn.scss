@@ -1,0 +1,16 @@
+@include defineKeyframes('bounceIn') {
+  0% {
+    opacity: 0;
+    #{$arg}transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    #{$arg}transform: scale(1.05);
+  }
+  70% {
+    #{$arg}transform: scale(0.9);
+  }
+  100% {
+    #{$arg}transform: scale(1);
+  }
+}

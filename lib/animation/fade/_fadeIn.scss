@@ -1,0 +1,4 @@
+@include defineKeyframes('fadeIn') {
+  opacity: 0;
+  #{$arg}transform: translateY(20px);
+}

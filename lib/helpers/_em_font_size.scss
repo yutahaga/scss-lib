@@ -1,0 +1,4 @@
+@function em-font-size($font-size, $base: $base-font-size) {
+  $number: em($font-size / $base);
+  @return $number;
+}

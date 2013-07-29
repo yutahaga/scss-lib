@@ -1,0 +1,35 @@
+@include defineKeyframes('shake') {
+  0% {
+    #{$arg}transform: translateX(0);
+  }
+  10% {
+    #{$arg}transform: translateX(-10px);
+  }
+  20% {
+    #{$arg}transform: translateX(10px);
+  }
+  30% {
+    #{$arg}transform: translateX(-10px);
+  }
+  40% {
+    #{$arg}transform: translateX(10px);
+  }
+  50% {
+    #{$arg}transform: translateX(-10px);
+  }
+  60% {
+    #{$arg}transform: translateX(10px);
+  }
+  70% {
+    #{$arg}transform: translateX(-10px);
+  }
+  80% {
+    #{$arg}transform: translateX(10px);
+  }
+  90% {
+    #{$arg}transform: translateX(-10px);
+  }
+  100% {
+    #{$arg}transform: translateX(0);
+  }
+}

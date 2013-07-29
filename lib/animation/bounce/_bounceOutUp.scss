@@ -1,0 +1,13 @@
+@include defineKeyframes('bounceOutUp') {
+  0% {
+    #{$arg}transform: translateY(0);
+  }
+  20% {
+    opacity: 1;
+    #{$arg}transform: translateY(20px);
+  }
+  100% {
+    opacity: 0;
+    #{$arg}transform: translateY(-2000px);
+  }
+}

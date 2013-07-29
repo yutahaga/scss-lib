@@ -1,0 +1,20 @@
+$medias:
+  (tiny, "all and (max-width: 18.75em)") // 300px
+  (mobile, "all and (min-width: 20em)") // 320px
+  (large-mobile, "all and (min-width: 30em)") // 480px
+  (small-tablet, "all and (min-width: 37.5em)") // 600px
+  (tablet, "all and (min-width: 48em)") // 768px
+  (desktop, "all and (min-width: 60em)") // 960px
+  (large-desktop, "all and (min-width: 70em)") !default; // 112 0px
+
+@mixin mq($media: tablet) {
+  @for $i from 1 through length($medias) {
+    $keyword: nth(nth($medias, $i), 1);
+    $content: nth(nth($medias, $i), 2);
+    @if $media == $keyword {
+      @media #{$content} {
+        @content;
+      }
+    }
+  }
+}

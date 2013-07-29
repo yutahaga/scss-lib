@@ -1,0 +1,4 @@
+@function em($number) {
+	$number: ($number * 1em);
+	@return $number;
+}

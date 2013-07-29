@@ -1,0 +1,24 @@
+$arg: null;
+
+@mixin defineKeyframes($name) {
+  @-webkit-keyframes #{$name} {
+    $arg: -webkit-;
+    @content;
+  }
+  @-moz-keyframes #{$name} {
+    $arg: -moz-;
+    @content;
+  }
+  @-o-keyframes #{$name} {
+    $arg: -o-;
+    @content;
+  }
+  @keyframes #{$name} {
+    $arg: null;
+    @content;
+  }
+}
+
+//@mixin animate($name: fadeIn, $duration: 1s, $delay: .2s, $function: ease, $mode: both) {
+//  @include experimental(animation, $name $duration $delay $function $mode);
+//}

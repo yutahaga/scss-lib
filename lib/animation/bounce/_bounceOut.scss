@@ -1,0 +1,16 @@
+@include defineKeyframes('bounceOut') {
+  0% {
+    #{$arg}transform: scale(1);
+  }
+  25% {
+    #{$arg}transform: scale(0.95);
+  }
+  50% {
+    opacity: 1;
+    #{$arg}transform: scale(1.1);
+  }
+  100% {
+    opacity: 0;
+    #{$arg}transform: scale(0.3);
+  }
+}

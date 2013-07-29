@@ -1,0 +1,12 @@
+@include defineKeyframes('rotateIn') {
+  0% {
+    #{$arg}transform-origin: center center;
+    #{$arg}transform: rotate(-200deg);
+    opacity: 0;
+  }
+  100% {
+    #{$arg}transform-origin: center center;
+    #{$arg}transform: rotate(0);
+    opacity: 1;
+  }
+}

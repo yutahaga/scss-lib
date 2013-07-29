@@ -1,0 +1,16 @@
+@include defineKeyframes('bounceInLeft') {
+  0% {
+    opacity: 0;
+    #{$arg}transform: translateX(-2000px);
+  }
+  60% {
+    opacity: 1;
+    #{$arg}transform: translateX(30px);
+  }
+  80% {
+    #{$arg}transform: translateX(-10px);
+  }
+  100% {
+    #{$arg}transform: translateX(0);
+  }
+}

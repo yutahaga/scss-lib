@@ -1,0 +1,43 @@
+@function good-color-saturation($fg: black, $threshold: 38%) {
+  $saturation-fg: saturation($fg);
+  $saturation-adjust: abs($saturation-fg - $threshold);
+  $color: null;
+
+  @if $saturation-fg >= $threshold {
+    $color: desaturate($fg, $saturation-adjust);
+  } @else {
+    $color: saturate($fg, $saturation-adjust);
+  }
+
+  @return $color;
+}
+
+@function good-color-lightness($fg: black, $bg: white, $threshold: 50%) {
+  $lightness-bg: lightness($bg);
+  $lightness-fg: lightness($fg);
+  $lightness-diff: $lightness-bg - $lightness-fg;
+  $lightness-adjust: abs(abs($lightness-diff) - $threshold);
+  $color: null;
+
+  @if $lightness-diff >= 0 {
+    @if $lightness-diff >= $threshold {
+      $color: lighten($fg, $lightness-adjust);
+    } @else {
+      $color: darken($fg, $lightness-adjust);
+    }
+  } @else {
+    @if $lightness-diff >= $threshold {
+      $color: darken($fg, $lightness-adjust);
+    } @else {
+      $color: lighten($fg, $lightness-adjust);
+    }
+  }
+
+  @return $color;
+}
+
+@function good-color($fg: black, $bg: white, $threshold-saturation: 38%, $threshold-lightness: 50%) {
+  $color: good-color-saturation($fg, $threshold-saturation);
+  $color: good-color-lightness($color, $bg, $threshold-lightness);
+  @return $color;
+}

@@ -1,0 +1,10 @@
+@include defineKeyframes('fadeOutRight') {
+  0% {
+    opacity: 1;
+    #{$arg}transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    #{$arg}transform: translateX(20px);
+  }
+}

@@ -1,0 +1,35 @@
+@include defineKeyframes('tada') {
+  0% {
+    #{$arg}transform: scale(1);
+  }
+  10% {
+    #{$arg}transform: scale(0.9) rotate(-3deg);
+  }
+  20% {
+    #{$arg}transform: scale(0.9) rotate(-3deg);
+  }
+  30% {
+    #{$arg}transform: scale(1.1) rotate(3deg);
+  }
+  40% {
+    #{$arg}transform: scale(1.1) rotate(-3deg);
+  }
+  50% {
+    #{$arg}transform: scale(1.1) rotate(3deg);
+  }
+  60% {
+    #{$arg}transform: scale(1.1) rotate(-3deg);
+  }
+  70% {
+    #{$arg}transform: scale(1.1) rotate(3deg);
+  }
+  80% {
+    #{$arg}transform: scale(1.1) rotate(-3deg);
+  }
+  90% {
+    #{$arg}transform: scale(1.1) rotate(3deg);
+  }
+  100% {
+    #{$arg}transform: scale(1) rotate(0);
+  }
+}

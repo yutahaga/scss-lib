@@ -1,0 +1,23 @@
+@include defineKeyframes('bounce') {
+  0% {
+    #{$arg}transform: translateY(0);
+  }
+  20% {
+    #{$arg}transform: translateY(0);
+  }
+  40% {
+    #{$arg}transform: translateY(-30px);
+  }
+  50% {
+    #{$arg}transform: translateY(0);
+  }
+  60% {
+    #{$arg}transform: translateY(-15px);
+  }
+  80% {
+    #{$arg}transform: translateY(0);
+  }
+  100% {
+    #{$arg}transform: translateY(0);
+  }
+}
